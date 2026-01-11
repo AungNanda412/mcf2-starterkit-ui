@@ -3,6 +3,7 @@ import { BookOpen, ChevronDown, Folder, LayoutDashboard, LogOut, Settings } from
 import { Geist, Geist_Mono, Noto_Sans } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useState } from "react"
 
 const notoSans = Noto_Sans({ variable: "--font-sans" })
@@ -19,6 +20,9 @@ const geistMono = Geist_Mono({
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false)
+
+  const pathname = usePathname();
+  const isDashboardPage = pathname === '/dashboard';
 
   const handleSettingsClick = () => {
     setIsOpen(!isOpen)
@@ -38,14 +42,14 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
               <p className="text-xs text-gray-300">Admin dashboard</p>
             </div>
           </div>
-
+    
           <nav className="flex-1">
             <p className="hidden md:block text-xs font-semibold text-gray-400 mb-2">PLATFORM</p>
 
-            <button className="w-full flex items-center gap-3 py-2 px-2 rounded-lg bg-white/6 hover:bg-white/8 transition-colors">
+            <Link href="/dashboard" className={`w-full flex items-center gap-3 py-2 px-2 rounded-lg ${isDashboardPage ? 'bg-white/6' : ''} hover:bg-white/8 transition-colors}`}>
               <LayoutDashboard color="white" size={20} />
               <span className="hidden md:inline text-sm">Dashboard</span>
-            </button>
+            </Link>
 
             <div className="mt-4 space-y-1">
               <button className="w-full flex items-center gap-3 py-2 px-2 rounded-lg hover:bg-white/2 transition-colors">
