@@ -1,3 +1,9 @@
+
 export default function Page() {
-  return <h1>Hello</h1>;
+  return (
+    <main>
+        <h1>Welcome to the Home Page</h1>
+        <p>This is laravel starter kit</p>
+    </main>
+  );
 }
