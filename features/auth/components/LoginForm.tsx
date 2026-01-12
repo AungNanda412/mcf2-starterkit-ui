@@ -1,6 +1,8 @@
 "use client";
 const LoginForm = () => {
-  return <div>LoginForm</div>;
+  return <>
+  
+  </>
 };
 
 export default LoginForm;
