@@ -26,25 +26,25 @@ export default function ProfileLayout({
         {}
         <aside className="w-full md:w-64 flex flex-col gap-1 md:pt-6">
           <Link
-            href="/profile"
+            href="/dashboard/profile"
             className={`p-2 hover:bg-gray-900 ${active("/profile")}`}
           >
             Profile
           </Link>
           <Link
-            href="/password"
+            href="/dashboard/password"
             className={`p-2  hover:bg-gray-900 ${active("/password")}`}
           >
             Password
           </Link>
           <Link
-            href="/two-auth"
+            href="/dashboard/two-auth"
             className={`p-2 hover:bg-gray-900 ${active("/two-auth")}`}
           >
             Two-Factor Auth
           </Link>
           <Link
-            href="/appearance"
+            href="/dashboard/appearance"
             className={`p-2 hover:bg-gray-900 ${active("/appearance")}`}
           >
             Appearance
