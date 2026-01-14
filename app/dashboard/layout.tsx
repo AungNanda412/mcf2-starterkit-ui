@@ -53,10 +53,10 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
             </Link>
 
             <div className="mt-4 space-y-1">
-              <button className="w-full flex items-center gap-3 py-2 px-2 rounded-lg hover:bg-white/2 transition-colors">
+              <Link href="https://github.com/AungNanda412/mcf2-starterkit-ui/tree/feat/auth" className="w-full flex items-center gap-3 py-2 px-2 rounded-lg hover:bg-white/2 transition-colors">
                 <Folder color="#9CA3AF" size={18} />
                 <span className="hidden md:inline text-sm text-gray-300">Repository</span>
-              </button>
+              </Link>
 
               <button className="w-full flex items-center gap-3 py-2 px-2 rounded-lg hover:bg-white/2 transition-colors">
                 <BookOpen color="#9CA3AF" size={18} />
