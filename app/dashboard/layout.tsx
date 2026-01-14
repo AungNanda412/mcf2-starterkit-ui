@@ -3,7 +3,7 @@ import { BookOpen, ChevronDown, Folder, LayoutDashboard, LogOut, Settings } from
 import { Geist, Geist_Mono, Noto_Sans } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { useState } from "react"
 
 const notoSans = Noto_Sans({ variable: "--font-sans" })
@@ -20,6 +20,7 @@ const geistMono = Geist_Mono({
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const router = useRouter();
 
   const pathname = usePathname();
   const isDashboardPage = pathname === '/dashboard';
@@ -109,7 +110,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
                     <span className="text-sm font-medium">Settings</span>
                   </Link>
 
-                  <button
+                  <button onClick={() => router.replace("/login")}
                     className="w-full flex items-center gap-3 py-2 px-4 rounded text-red-600 mt-1"
                     role="menuitem"
                   >
