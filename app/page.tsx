@@ -1,9 +1,10 @@
+import AuthLayout from "@/features/auth/components/AuthLayout";
+import LoginForm from "@/features/auth/components/LoginForm";
 
 export default function Page() {
   return (
-    <main>
-        <h1>Welcome to the Home Page</h1>
-        <p>This is laravel starter kit</p>
-    </main>
+    <AuthLayout>
+      <LoginForm />
+    </AuthLayout>
   );
 }
