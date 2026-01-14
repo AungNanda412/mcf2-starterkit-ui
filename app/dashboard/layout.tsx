@@ -101,7 +101,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
 
                 <div className="py-2">
                   <Link 
-                    href="/dashboard/settings"
+                    href="/dashboard/profile"
                     className="w-full flex items-center gap-3 py-2 px-4 rounded"
                     role="menuitem"
                   >
