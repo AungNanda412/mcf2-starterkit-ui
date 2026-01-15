@@ -30,10 +30,10 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   }
 
   return (
-    <main className={`${geistSans.variable} ${geistMono.variable} antialiased ${notoSans.variable}`}>
-      <div className="flex w-full min-h-screen bg-gray-50">
+    <main className={`${geistSans.variable} ${geistMono.variable} antialiased ${notoSans.variable} h-screen overflow-hidden`}>
+      <div className="flex w-full h-full bg-gray-50">
         {/* SIDEBAR */}
-        <aside className="w-20 md:w-64 bg-linear-to-b from-gray-900 via-gray-800 to-gray-900 text-white p-4 flex flex-col">
+        <aside className="w-20 md:w-64 bg-linear-to-b from-gray-900 via-gray-800 to-gray-900 text-white p-4 flex flex-col overflow-hidden">
           <div className="flex items-center gap-3 mb-6">
             <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-lg bg-white/6 ring-1 ring-white/10">
               <Image src="/assets/Laravel-Logo.svg" alt="Logo" width={36} height={36} className="object-contain" />
@@ -123,7 +123,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </aside>
 
-        <section className="flex-1 bg-linear-to-b from-gray-50 to-gray-100">
+        <section className="flex-1 bg-linear-to-b from-gray-50 to-gray-100 overflow-y-auto h-full">
           {children}
         </section>
       </div>
